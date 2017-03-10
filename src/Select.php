@@ -32,6 +32,7 @@ class Select extends InputWidget
      */
     public function run()
     {
+        SelectAsset::register($this->getView());
         parent::run();
         $this->registerJs();
         return ($this->hasModel() ? Html::activeDropDownList($this->model, $this->attribute, $this->items, $this->options) : Html::dropDownList($this->name, $this->value, $this->items, $this->options));

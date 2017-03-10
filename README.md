@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist zertex/yii2-zx-bootstrap-select "*"
+php composer.phar require --prefer-dist zertex/yii2-zx-bootstrap-select "dev-master"
 ```
 
 or add
 
 ```
-"zertex/yii2-zx-bootstrap-select": "*"
+"zertex/yii2-zx-bootstrap-select": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
