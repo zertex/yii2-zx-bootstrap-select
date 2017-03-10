@@ -21,6 +21,8 @@ class Select extends InputWidget
      */
     public $clientOptions = [];
 
+    public $selector = 'select-picker';
+    
     /**
      * @throws \yii\base\InvalidConfigException
      */
@@ -44,7 +46,7 @@ class Select extends InputWidget
     private function registerJs()
     {
         $o = ArrayHelper::merge([
-            'selector' => 'select-picker',
+            'selector' => $this->selector,
             'menuArrow' => true,
             'tickIcon' => true,
             'selectpickerOptions' => [
