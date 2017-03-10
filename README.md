@@ -33,7 +33,12 @@ Once the extension is installed, simply use it in your code by :
     'selector' => '.select-picker',
     'options' => [
         'data-live-search' => 'true',
-     ],
+    ],
+    'selectOptions' => [
+        'style' => 'btn-default form-control',
+        'data-live-search' => 'true',
+        'width' => '100%',
+    ],
     'items' => [
         '1' => 'Item 1',
         '2' => 'Item 2',
