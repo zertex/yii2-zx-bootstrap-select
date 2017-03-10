@@ -20,7 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "zertex\\bootstrapselect\\": ""
+            "zertex\\bootstrapselect\\": "src"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
         }
     }
 }
