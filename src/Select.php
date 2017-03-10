@@ -5,6 +5,7 @@ use Yii;
 use yii\widgets\InputWidget;
 use yii\helpers\Html;
 use yii\helpers\Json;
+use yii\helpers\ArrayHelper;
 
 class Select extends InputWidget
 {
