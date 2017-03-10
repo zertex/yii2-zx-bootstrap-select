@@ -20,6 +20,7 @@ class Select extends InputWidget
      * @var array
      */
     public $clientOptions = [];
+    public $selectOptions = [];
 
     public $selector = 'select-picker';
     
@@ -49,9 +50,7 @@ class Select extends InputWidget
             'selector' => $this->selector,
             'menuArrow' => true,
             'tickIcon' => true,
-            'selectpickerOptions' => [
-                'style' => 'btn-default form-control',
-            ],
+            'selectOptions' => $this->selectOptions,
         ], $this->clientOptions); 
         if (!is_string($o['selector']) || empty($o['selector']))
         {
@@ -65,7 +64,7 @@ class Select extends InputWidget
             $js .= '$("' . $o['selector'] . '").addClass("show-tick");' . PHP_EOL;
         }
         //Enable Bootstrap-Select for $o['selector']
-        $js .= '$("' . $o['selector'] . '").selectpicker(' . Json::htmlEncode($o['selectpickerOptions']) . ');' . PHP_EOL;
+        $js .= '$("' . $o['selector'] . '").selectpicker(' . Json::htmlEncode($o['selectOptions']) . ');' . PHP_EOL;
         
         //Update Bootstrap-Select by :reset click
         $js .= '$(":reset").click(function(){

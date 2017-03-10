@@ -43,3 +43,7 @@ Once the extension is installed, simply use it in your code by :
     ]
 ]);
 ?>```
+
+##Options
+
+* **clientOptions** - options of plugin. See https://silviomoreto.github.io/bootstrap-select/
