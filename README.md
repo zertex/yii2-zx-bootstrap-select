@@ -27,5 +27,19 @@ Usage
 
 Once the extension is installed, simply use it in your code by :
 
+
 ```php
-<?= \zertex\bootstrapselect\Select::widget(); ?>```
+<?= $form->field($model, 'field')->widget(Select::className(), [
+    'selector' => '.select-picker',
+    'options' => [
+        'data-live-search' => 'true',
+     ],
+    'items' => [
+        '1' => 'Item 1',
+        '2' => 'Item 2',
+        '3' => 'Item 3',
+        '4' => 'Item 4',
+        '5' => 'Item 5',
+    ]
+]);
+?>```
