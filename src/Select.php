@@ -72,6 +72,10 @@ class Select extends InputWidget
             $("' . $o['selector'] . '").selectpicker("refresh");
         });';
         
+        if (isset($o['val']) && $o['val']) {
+            $js .= '$("' . $o['selector'] . '").selectpicker("val", "' . $o['val'] . '");' . PHP_EOL;
+        }
+        
         $view = $this->getView();
         $view->registerJs($js);
     }
